@@ -43,11 +43,21 @@ button{
     font: bold;
     
 }
+
      
         </style>
 
     </head>
     <body>
+        <script>
+            let x=0;
+            function add(){
+                
+               x=Number(x)+ Number(document.querySelector('#num').value);
+        
+                document.querySelector('#addcart').innerHTML= x;
+            }
+        </script>
         <header>
             <section>
                 <div id="container">
@@ -63,7 +73,7 @@ button{
                             <input type="text" id="input" name="searchBox" placeholder="Search products">
                         </div>
                         <div id="user">
-                            <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 1 </div></i></a>
+                            <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="addcart"> 1 </div></i></a>
                             <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
                         </div>
                 </div>
@@ -84,7 +94,9 @@ button{
                     <h3>Rs 2599</h3><h3>Description</h3>
                     <p>Lifestyle: Running Shoes <br>
                     Warranty Type: Manufacturer</p>
-                    <button>ADD to Cart</button>
+                    <input  type="number" id="num" onchange="add()">
+                    <a href="cia 3 cart.html"><button >ADD to Cart</button></a>
+                    
                 </td>
             </table>
         </div>
