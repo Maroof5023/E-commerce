@@ -25,7 +25,7 @@ body
 }
 .img3{
     animation-name: a3;
-}
+/* }
 @keyframes a1{
     0%{;}
     25%{opacity: 1 !important;}
@@ -47,7 +47,7 @@ body
     25%{opacity: 0 !important;}
     50%{opacity: 1 !important;}
     75%{opacity: 1 !important;}
-    100%{opacity: 0 !important;}
+    100%{opacity: 0 !important;} */
 
 }
 #container
