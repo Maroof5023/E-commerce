@@ -52,10 +52,10 @@ button{
         <script>
             let x=0;
             function add(){
-                
-               x=Number(x)+ Number(document.querySelector('#num').value);
-        
-                document.querySelector('#addcart').innerHTML= x;
+                x=Number(x)
+              let t=Number( document.querySelector('#num').value);
+                x=t;
+                document.querySelector('#badge').innerHTML= x;
             }
         </script>
         <header>
@@ -73,7 +73,7 @@ button{
                             <input type="text" id="input" name="searchBox" placeholder="Search products">
                         </div>
                         <div id="user">
-                            <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="addcart"> 1 </div></i></a>
+                            <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 1 </div></i></a>
                             <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
                         </div>
                 </div>

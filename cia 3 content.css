@@ -13,6 +13,43 @@ body
     top: 10px;
     right:158px;
 }
+.mySlides{
+    position: absolute;
+    animation-duration: 10s;
+}
+.img1{
+    animation-name: a1;
+}
+.img2{
+    animation-name: a2;
+}
+.img3{
+    animation-name: a3;
+}
+@keyframes a1{
+    0%{;}
+    25%{opacity: 1 !important;}
+    50%{opacity: 0 !important;}
+    75%{opacity: 0 !important;}
+    100%{opacity: 1 !important;}
+
+}
+@keyframes a2{
+    0%{opacity: 0 !important;}
+    25%{opacity: 1 !important;}
+    50%{opacity: 1 !important;}
+    75%{opacity: 0 !important;}
+    100%{opacity: 0 !important;}
+
+}
+@keyframes a3{
+    0%{opacity: 0 !important;}
+    25%{opacity: 0 !important;}
+    50%{opacity: 1 !important;}
+    75%{opacity: 1 !important;}
+    100%{opacity: 0 !important;}
+
+}
 #container
 {
     background-color: white;
