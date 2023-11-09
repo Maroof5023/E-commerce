@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> E-COMMERCE WEBSITE </title>
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+
+    <link rel="stylesheet" href="C:\Users\m\Desktop\html\cia 3 index.css">
+    <link rel="stylesheet" href="C:\Users\m\Desktop\html\cia 3 content.css">
+    <style>
+        .d{
+            display: flex;
+            flex-direction: column;
+        }
+        #r{
+            display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+        }
+        .r1{
+            width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+    
+
+        }
+        .r1 img{
+            width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+        }
+  h3
+{
+    font-size: 16px;
+}
+h4
+{
+    font-weight: 100;
+}
+h2
+{
+    color: rgb(3, 94, 94);
+}
+       
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <section>
+            <div id="container">
+                <div id="shopName"><a href="index.html"> <b>BUY</b>KARLO </a></div>
+                    <div id="collection">
+                        <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
+                        <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div>
+                                                <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div>
+
+
+                       
+                    </div>
+                    <div id="search">
+                    
+                        <i class="fas fa-search search"></i>
+                        <input type="text" id="input" name="searchBox" placeholder="Search products">
+                         
+                    </div>
+                    <div id="user">
+                        <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
+                        <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+                    </div>
+            </div>
+
+        </section>
+    </header>
+
+
+    
+
+
+<section>
+    
+<div id="slideshow">
+    <div>
+      <img class="myslides" src="https://shoplane-by-lassie.netlify.app/img/img4.png">
+    </div>
+    <div>
+      <img class="myslides"  src="https://res.cloudinary.com/trobes/image/upload/v1547224649/nightportrait.jpg">
+    </div>
+    <div>
+      <img class="myslides"  src="https://res.cloudinary.com/trobes/image/upload/v1547224649/6lifeftw.jpg">
+    </div>
+   <div>
+      <img class="myslides"  src="https://res.cloudinary.com/trobes/image/upload/v1547224649/mountain.jpg">
+    </div>
+   <div>
+      <img class="myslides"  src="">
+    </div>
+</section>
+
+
+<div class="slideshow">
+    <img class="mySlides" src="https://shoplane-by-lassie.netlify.app/img/img4.png" style="width:100%">
+    <img class="mySlides" src="img_snow_wide.jpg" style="width:100%">
+    <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
+    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+      <div onclick="plusDivs(-1)">&#10094;</div>
+      <div class="slideshow" onclick="plusDivs(1)">&#10095;</div>
+      <span class="slideshow" onclick="currentDiv(1)"></span>
+      <span class="slideshow" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    </div>
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " w3-white";
+  }
+  </script>
+  
+
+
+    <!-- // var myIndex = 0;
+    // carousel();
+    
+    // function carousel() {
+    //   var i;
+    //   var x = document.getElementsByClassName("myslides");
+    //   for (i = 0; i < x.length; i++) {
+    //     x[i].style.display = "none";  
+    //   }
+    //   myIndex++;
+    //   if (myIndex > x.length) {myIndex = 1}    
+    //   x[myIndex-1].style.display = "block";  
+    //   setTimeout(carousel, 2000);
+    // }
+    // -->
+
+<h1>Top deals</h1>
+<div id="r">
+    <div class="r1"><a href="C:\Users\m\Desktop\html\cia 3 product.html"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/4/n/-original-imagg6ezhzfzzf8g.jpeg?q=70"></a><br>
+        <h3>SHOE</h3><h4>Men's Gym Running Shoes</h4><h2>RS 45,000</h2></div>
+    <div class="r1"><img src="https://m.media-amazon.com/images/I/41XeY08b+2L._AC_UF226,226_FMjpg_.jpg" style="height: 50%;width: 90%;"><br>
+    <h3>beatXP</h3><h4>beatXP Marv Neo 1.85</h4><h2>RS 5,000</h2></div>
+    <div class="r1"><img src="https://rukminim2.flixcart.com/image/612/612/kpcy5jk0/kurta/y/c/s/3xl-21few16119-215606-w-original-imag3hzehh2mszrc.jpeg?q=70"style="height: 75%;"><br>
+    <h3>YASH GALLERY</h3><h4>Cotton Anarkali Kurta</h4><h2>RS 985</h2></div>
+   <div class="r1"> <img src="https://m.media-amazon.com/images/I/51LByp9EsxL._AC_UF226,226_FMjpg_.jpg" >
+    <h3>OnePlus Nord 5G</h3><h4>Free Delivery</h4><h2>RS 49,999</h2></div>
+    <div class="r1"> <img src="https://m.media-amazon.com/images/I/3178oNp9brL._AC_UF226,226_FMjpg_.jpg">
+    <h3>Thekinmantra</h3><h4>Monster Doodle 17129SLVL <h2>RS 79,000</h2></h4></div>
+  
+</div>
+<h1>Clothes</h1>
+<div id="r">
+    <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg"><br>
+        <h3>Men Black shirt</h3><h4>Puma</h4><h2>RS 5000</h2></div>
+    <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg"><br>
+   <h3> Men Navy Blue solit </h3><h4>United Colors</h4><h2>RS 2599</h2></div>
+    <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/5649908/2018/5/10/6bfe80cd-2f55-42bc-aa7f-e0d6c9e2ac531525936414747-SASSAFRAS-Women-Blue-Solid-Shirt-Dress-3831525936414532-1.jpg"><br>
+    <h3>Women Blue Dress</h3><h4>SASSAFRAS</h4><h2>RS 5499</h2></div>
+   <div class="r1"> <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg" >
+    <h3>Men Black MAMGP T7 Jacket</h3><h4>Puma</h4><h2>RS 11000</h2></div>
+   <div class="r1"> <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/3854721/2018/3/12/11520844673915-BARESKIN-Women-Black-Solid-Lightweight-Leather-Jacket-7761520844673718-1.jpg">
+    <h3>Women Black Jacket</h3><h4>BARESKIN</h4><h2>RS 9999</h2></div>
+</div>
+<h1>Accessories</h1>
+
+<div id="r">
+    <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2019/2/23/dc05b5e5-aa82-493e-bf0b-0c309baf21021550920383101-1.jpg"><br>
+        <h3>shirt</h3><h4>reymond</h4><h2>45,000</h2></div>
+    <div class="r1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2VmRIpV48X6feRgXer1Clz-MJezIoIQ3nXQ&usqp=CAU"><br>
+    <p>by the</p></div>
+    <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9803247/2019/5/27/624dac60-4c42-4902-bba1-30a51cc7f43c1558948536543-Apple-Unisex-Smart-Watches-1441558948536225-1.jpg"><br>
+    by hel</div>
+   <div class="r1"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hGB7YHU8kOOX8GT9lN6POEon413KUTkYcdTAXdZ4oIO1e5yEnSU8S2_PAsi11o4IHEo&usqp=CAU"></div>
+   <div class="r1"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQ0UESmcd6AFJy1mj-vDkpskPM4hXKGEKSg&usqp=CAU" ></div>
+</div>
+<div id="mainContainer">
+
+    <h1> clothing for men and women </h1>
+    <div id="containerClothing">
+        <!-- JS rendered code -->
+    </div>
+
+    <h1> accessories for men and women </h1>
+    <div id="containerAccessories">
+        <!-- JS rendered code -->
+    </div>
+</div>
+</body>
+<script src="C:\Users\m\Desktop\html\cia 3 index.js"></script>
+
+</body>
+</html>
