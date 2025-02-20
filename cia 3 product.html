@@ -1,104 +1,132 @@
-<html>
-    <head>
-        <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
-        <link rel="stylesheet" href="C:\Users\m\Desktop\html\cia 3 content.css">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title> Product1 Page </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="cia 3 index.css">
 
-<style>
-
-#r{
-    display: grid;
-    grid-gap: 70px 20px;
-    grid-template-columns: repeat(5, 1fr);
-    width: 90%;
-    margin: auto;
-    padding-top: 40px;
-   }
-
-    img{
-          
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    align-content: center;
-    border-radius: 10px;
-    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+  <style>
+   .quantity-input {
+            width: 3rem;
+            text-align: center;
         }
-  h3
-{
-    font-size: 16px;
-}
-h4
-{
-    font-weight: 100;
-}
-h2
-{
-    color: rgb(196, 23 , 23);
-}
-button{
-    border: none;
-    border-radius: 6px;
-    height: 2rem;width: 7rem;
-    background-color: rgb(196, 23, 23);
-    font-size: 16px;
-    font: bold;
-    
-}
-
-     
-        </style>
-
-    </head>
-    <body>
-        <script>
-            let x=0;
-            function add(){
-                x=Number(x)
-              let t=Number( document.querySelector('#num').value);
-                x=t;
-                document.querySelector('#badge').innerHTML= x;
-            }
-        </script>
-        <header>
-            <section>
-                <div id="container">
-                    <div id="shopName"><a href="index.html"> <b>BUY</b>KARLO </a></div>
-                        <div id="collection">
-                            <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
-                            <div id="accessories"><a href="accessories.html"> ACCESSORIES  </a></div>
-
-                        </div>
-                        <div id="search">
-                        
-                            <i class="fas fa-search search"></i>
-                            <input type="text" id="input" name="searchBox" placeholder="Search products">
-                        </div>
-                        <div id="user">
-                            <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 1 </div></i></a>
-                            <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
-                        </div>
+        .selected {
+        background-color: #ffcc00;
+        color: white; 
+        border-color: #ffcc00; 
+      }
+      .size-button {
+        transition: background-color 0.3s, color 0.3s;
+      }   
+  </style>
+  
+ </head>
+ 
+ <header style="padding-bottom: 9rem;">
+    <section>
+        <div id="container">
+            <div id="shopName"><a href="index.html"> <b>BUY</b>KARLO </a></div>
+                <div id="collection">
+                    <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
+                    <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div>
+                   
                 </div>
-    
-            </section>
-        </header>
-
-
-        <div style="padding-top: 10rem;"><br><br>
-            <table>
-                <td style="padding-left: 100px;">
-                    <div class="r">
-                    <img style="height: 1%;width:50% ;" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/4/n/-original-imagg6ezhzfzzf8g.jpeg?q=70">
-                </div></td>
-                <td style="padding-right: 100px;">
-                    <h1>Mens Rodeo ProRunning Shoe</h1>
-                    <h2 style="font: bold;">Colour:</h2><h2>BLU/ORG</h2>
-                    <h3>Rs 2599</h3><h3>Description</h3>
-                    <p>Lifestyle: Running Shoes <br>
-                    Warranty Type: Manufacturer</p>
-                    <input  type="number" id="num" onchange="add()">
-                    <a href="cia 3 cart.html"><button >ADD to Cart</button></a>
-                    
-                </td>
-            </table>
+                <div id="search">
+                    <i class="fas fa-search search"></i>
+                    <input type="text" id="input" name="searchBox" placeholder="Search products">
+                     
+                </div>
+                <div id="user">
+                    <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
+                    <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+                </div>
         </div>
-    </body>
+
+    </section>
+</header>
+
+<body class="bg-white text-gray-800">
+   
+
+  <div class="container mx-auto p-4 flex flex-col lg:flex-row">
+   <!-- Left Side: Thumbnails -->
+   <div class="flex flex-col items-center lg:items-start lg:w-1/6">
+    <div class="mb-2 border border-gray-300">
+     <img class="h-24 cursor-pointer thumbnail" alt="Thumbnail of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/t/d/v/-original-imah4a4nj5f5dg7h.jpeg?q=90&crop=false" onclick="changeMainImage(this)"/>
+    </div>
+    <div class="mb-2 border border-gray-300">
+     <img class="h-24 cursor-pointer thumbnail" alt="Thumbnail of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/l/m/b/-original-imah4a4ngc2hkfxj.jpeg?q=20&crop=false" onclick="changeMainImage(this)"/>
+    </div>
+    <div class="mb-2 border border-gray-300">
+     <img class="h-24 cursor-pointer thumbnail" alt="Thumbnail of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/c/8/i/-original-imah4a4nfwzgqune.jpeg?q=90&crop=false" onclick="changeMainImage(this)"/>
+    </div>
+    <div class="mb-2 border border-gray-300">
+     <img class="h-24 cursor-pointer thumbnail" alt="Thumbnail of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/b/d/-original-imah4a4nxywcsqth.jpeg?q=90&crop=false" onclick="changeMainImage(this)"/>
+    </div>
+    <div class="mb-2 border border-gray-300">
+     <img class="h-24 cursor-pointer thumbnail" alt="Thumbnail of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/a/9/y/-original-imah4a4npgvquguk.jpeg?q=90&crop=false" onclick="changeMainImage(this)"/>
+    </div>
+    <div class="mt-4">
+     <button class="border border-gray-300 px-4 py-2 rounded">
+      INR
+      <i class="fas fa-caret-down">
+      </i>
+     </button>
+    </div>
+   </div>
+   <!-- Right Side: Main Image and Product Details -->
+   <div class="lg:w-3/4">
+    <div class="flex flex-col lg:flex-row">
+     <!-- Main Image -->
+     <div class="lg:w-1/3">
+      <img id="main-image" alt="Main image of a woman wearing a charcoal mist handblock printed cotton kurti" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/s/c/n/-original-imahfpz67kbf8hnq.jpeg?q=20&crop=false"/>
+     </div>
+     <!-- Product Details -->
+     <div class="lg:w-1/2 lg:pl-8 mt-4 lg:mt-0">
+      <h1 class="text-2xl font-semibold">
+       ZOD RUNNER V3 CASUAL FOR MEN
+      </h1>
+      <p class="text-gray-500 mt-2">
+       PUMA: 2,74,632 ratings and 23,109 reviews
+      </p>
+      <p class="text-red-500 text-xl mt-2">
+       ₹1,090 INR
+       <span class="line-through text-gray-500">
+        ₹2,590 INR
+       </span>
+      </p>
+      <div class="mt-4">
+       <p class="font-semibold">
+        Size:
+       </p>
+       <div class="flex space-x-2 mt-2">
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> XS </button>
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> S  </button>
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> M  </button>
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> L  </button>
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> XL </button>
+        <button class="border border-gray-300 px-4 py-2 rounded size-button" onclick="selectSize(this)"> XXL</button>
+       </div>
+       <a class="text-gray-500 underline mt-2 inline-block" href="#"> Size chart </a>
+      </div>
+      <div class="mt-4 flex items-center">
+       <button class="border border-gray-300 px-4 py-2 rounded" onclick="decreaseQuantity()">
+        -
+       </button>
+       <input class="quantity-input border border-gray-300 mx-2 py-2 rounded" id="quantity" type="text" value="1"/>
+       <button class="border border-gray-300 px-4 py-2 rounded" onclick="increaseQuantity()">
+        +
+       </button>
+      </div>
+      <button class="bg-yellow-500 text-white px-6 py-3 rounded mt-4"> ADD TO CART </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  <script src="cia 3 index.js"> </script>
+
+ </body>
 </html>
