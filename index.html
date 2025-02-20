@@ -10,11 +10,28 @@
 
     <link rel="stylesheet" href="cia 3 index.css">
     <link rel="stylesheet" href="cia 3 content.css">
+    
     <style>
-        .d{
-            display: flex;
-            flex-direction: column;
+        .slideshow {
+            padding-top: 30px;
+            position: relative;
+            width: 100%;
+            height: 400px; /* Set a height for the slideshow */
+            overflow: hidden; /* Prevents overflow of images outside the container */
         }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%; /* Ensure images cover the whole container */
+            position: absolute; /* Stack all images on top of each other */
+            opacity: 0; /* Start with all images hidden */
+            transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+        }
+
+        .slideshow img.active {
+            opacity: 1; /* When active, make the image visible */
+        }
+
         #r{
             display: grid;
     grid-gap: 70px 20px;
@@ -37,13 +54,16 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
         }
+    .r2 {
+        padding: 10px;
+    }   
   h3
 {
     font-size: 16px;
 }
 h4
 {
-    font-weight: 100;
+    font-weight: 200;
 }
 h2
 {
@@ -72,7 +92,6 @@ h2
                        
                     </div>
                     <div id="search">
-                    
                         <i class="fas fa-search search"></i>
                         <input type="text" id="input" name="searchBox" placeholder="Search products">
                          
@@ -87,59 +106,78 @@ h2
     </header>
 
 <div class="slideshow">
-    <img class="mySlides img1" src="https://shoplane-by-lassie.netlify.app/img/img4.png" style="width:100%;opacity: 0.2;">
-    <img class="mySlides img2" src="https://shoplane-by-lassie.netlify.app/img/img4.png" style="width:100%">
-    <img class="mySlides img3" src="https://shoplane-by-lassie.netlify.app/img/img4.png" style="width:100%">
-    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-      <div onclick="plusDivs(-1)">&#10094;</div>
-      <div class="slideshow" onclick="plusDivs(1)">&#10095;</div>
-      <span class="slideshow" onclick="currentDiv(1)"></span>
-      <span class="slideshow" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-    </div>
+    <img class="mySlides img1" src="https://shoplane-by-lassie.netlify.app/img/img4.png">
+    <img class="mySlides img2" src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/74186f7b6cdbb0f0.jpeg?q=20">
+    <img class="mySlides img3" src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/54f94d29aa080c9c.jpg?q=20">
   </div>
   
   <script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
-  
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-  
-  function currentDiv(n) {
-    showDivs(slideIndex = n);
-  }
-  </script>
-  
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow img');
 
+    function showSlides() {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+
+        // Show the current slide
+        slides[slideIndex].classList.add('active');
+
+        // Move to the next slide
+        slideIndex = (slideIndex + 1) % slides.length;
+    }
+
+    // Set the slideshow to change images every 3 seconds
+    setInterval(showSlides, 3000);
+
+    // Show the first slide initially
+    showSlides();
+</script>
+ 
 <h1>Top deals</h1>
 <div id="r">
-    <div class="r1"><a href="cia 3 product.html"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/4/n/-original-imagg6ezhzfzzf8g.jpeg?q=70"></a><br>
-        <h3>SHOE</h3><h4>Men's Gym Running Shoes</h4><h2>RS 45,000</h2></div>
-    <div class="r1"><img src="https://m.media-amazon.com/images/I/41XeY08b+2L._AC_UF226,226_FMjpg_.jpg" style="height: 50%;width: 90%;"><br>
-    <h3>beatXP</h3><h4>beatXP Marv Neo 1.85</h4><h2>RS 5,000</h2></div>
-    <div class="r1"><img src="https://rukminim2.flixcart.com/image/612/612/kpcy5jk0/kurta/y/c/s/3xl-21few16119-215606-w-original-imag3hzehh2mszrc.jpeg?q=70"style="height: 75%;"><br>
-    <h3>YASH GALLERY</h3><h4>Cotton Anarkali Kurta</h4><h2>RS 985</h2></div>
-   <div class="r1"> <img src="https://m.media-amazon.com/images/I/51LByp9EsxL._AC_UF226,226_FMjpg_.jpg" >
-    <h3>OnePlus Nord 5G</h3><h4>Free Delivery</h4><h2>RS 49,999</h2></div>
-    <div class="r1"> <img src="https://m.media-amazon.com/images/I/3178oNp9brL._AC_UF226,226_FMjpg_.jpg">
-    <h3>Thekinmantra</h3><h4>Monster Doodle 17129SLVL <h2>RS 79,000</h2></h4></div>
-  
+    <div class="r1"><a href="cia 3 product.html"><img src="C:\Users\m\Downloads\E-commerce-main\E-commerce-main\Products_img\SHOES.jpeg"></a><br>
+        <div class ="r2">
+            <h3>asian</h3><h4>Casual Sneakers Shoes For Men</h4><h2>RS 45,00</h2>
+        </div></div>
+    <div class="r1"><a href="cia 3 product.html"><img src="C:\Users\m\Downloads\E-commerce-main\E-commerce-main\Products_img\WATCH.jpeg"></a><br>
+        <div class="r2">
+            <h3>citizen</h3><h4>Analog Watch - For Men BI5100-58E</h4><h2>RS 5,349</h2>
+        </div></div>
+    <div class="r1"><a href="product2.html"><img src="C:\Users\m\Downloads\E-commerce-main\E-commerce-main\Products_img\KURTI.jpeg"></a><br>
+        <div class="r2">
+            <h3>limrae</h3><h4>Charcoal Mist Handblock Printed Cotton Kurti</h4><h2>RS 1,1190</h2>
+        </div></div>
+   <div class="r1"> <img src="C:\Users\m\Downloads\E-commerce-main\E-commerce-main\Products_img\SMARTPHONE.jpeg" >
+       
+    
+    <div class="r2">
+            <h3>OnePlus Nord 5G</h3><h4>Free Delivery</h4><h2>RS 49,999</h2>
+        </div>
+
+   </div>
+    <div class="r1"> <img src="C:\Users\m\Downloads\E-commerce-main\E-commerce-main\Products_img\Laptop.jpeg">
+        <div class="r2">
+            <h3>Thekinmantra</h3><h4>Monster Doodle 17129SLVL <h2>RS 79,000</h2></h4>
+        </div>
+       </div>
 </div>
+
 <h1>Clothes</h1>
 <div id="r">
     <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg"><br>
         <h3>Men Black shirt</h3><h4>Puma</h4><h2>RS 5000</h2></div>
     <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg"><br>
-   <h3> Men Navy Blue solit </h3><h4>United Colors</h4><h2>RS 2599</h2></div>
+        <h3> Men Navy Blue solit </h3><h4>United Colors</h4><h2>RS 2599</h2></div>
     <div class="r1"><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/5649908/2018/5/10/6bfe80cd-2f55-42bc-aa7f-e0d6c9e2ac531525936414747-SASSAFRAS-Women-Blue-Solid-Shirt-Dress-3831525936414532-1.jpg"><br>
-    <h3>Women Blue Dress</h3><h4>SASSAFRAS</h4><h2>RS 5499</h2></div>
+        <h3>Women Blue Dress</h3><h4>SASSAFRAS</h4><h2>RS 5499</h2></div>
    <div class="r1"> <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg" >
-    <h3>Men Black MAMGP T7 Jacket</h3><h4>Puma</h4><h2>RS 11000</h2></div>
+        <h3>Men Black MAMGP T7 Jacket</h3><h4>Puma</h4><h2>RS 11000</h2></div>
    <div class="r1"> <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/3854721/2018/3/12/11520844673915-BARESKIN-Women-Black-Solid-Lightweight-Leather-Jacket-7761520844673718-1.jpg">
-    <h3>Women Black Jacket</h3><h4>BARESKIN</h4><h2>RS 9999</h2></div>
+        <h3>Women Black Jacket</h3><h4>BARESKIN</h4><h2>RS 9999</h2></div>
 </div>
+
 <h1>Accessories</h1>
 
 <div id="r">
@@ -156,5 +194,4 @@ h2
 
 </div>
 </body>
-<!-- -<script src="C:\Users\m\Desktop\html\cia 3 index.js"></script> -->
 </html>
